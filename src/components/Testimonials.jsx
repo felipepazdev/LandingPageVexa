@@ -11,7 +11,7 @@ const testimonials = [
     city: 'São Paulo, SP',
     avatar: 'SM',
     color: '#3B82F6',
-    quote: 'Em 2 semanas usando a Vexa, aumentei meu faturamento em 22%. A automação de confirmações pelo WhatsApp eliminou 90% dos no-shows.',
+    quote: 'Em 2 semanas usando a Vexa, o movimento no meu estúdio ficou muito mais organizado. Os lembretes automáticos de WhatsApp reduziram as faltas drasticamente.',
     stars: 5,
   },
   {

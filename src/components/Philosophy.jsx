@@ -21,9 +21,9 @@ const steps = [
   {
     num: '02',
     title: 'Sua Agenda no Automático',
-    desc: 'Você só precisa marcar o horário. O resto a Vexa faz: avisa o cliente, confirma a vinda e tranca o horário na agenda.',
+    desc: 'Você só precisa marcar o horário. O resto a Vexa cuida para você, enviando lembretes personalizados que reduzem os esquecimentos.',
     color: '#A78BFA',
-    bullets: ['Agenda visual e colorida', 'Avisos automáticos no WhatsApp', 'Saiba quem confirmou na hora'],
+    bullets: ['Agenda visual e colorida', 'Lembretes automáticos no WhatsApp', 'Sua equipe sempre por dentro'],
     component: CursorScheduler
   },
   {

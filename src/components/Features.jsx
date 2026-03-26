@@ -17,9 +17,9 @@ const features = [
   },
   {
     icon: MessageCircle,
-    title: 'Adeus, "Será que vem?"',
-    desc: 'O sistema avisa seus clientes por WhatsApp antes do horário. Eles confirmam e você não fica perdendo tempo esperando.',
-    tag: 'WhatsApp Automático',
+    title: 'Lembretes Inteligentes',
+    desc: 'O sistema envia notificações automáticas via WhatsApp antes de cada serviço. Reduza o nível de faltas no seu estúdio sem precisar mandar mensagens uma por uma.',
+    tag: 'Redução de Faltas',
     accentColor: '#10B981',
     glowColor: 'rgba(16,185,129,0.12)',
     borderHover: 'rgba(16,185,129,0.3)',

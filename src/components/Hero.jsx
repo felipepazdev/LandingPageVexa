@@ -56,7 +56,7 @@ export default function Hero({ onOpenTrial }) {
 
         {/* Subtitle */}
         <p className="hero-sub text-lg md:text-xl text-textMuted max-w-2xl mx-auto mb-11 font-light leading-relaxed">
-          O sistema que cuida de tudo para você: da agenda que não fura até o dinheiro que entra no bolso. Tudo simples, rápido e direto no seu WhatsApp. Do jeito que você sempre quis.
+          A plataforma completa para você gerenciar sua agenda, equipe e financeiro em um só lugar. Tenha o controle total do seu negócio com lembretes inteligentes que chegam direto no celular dos seus clientes.
         </p>
 
         {/* CTA Buttons */}

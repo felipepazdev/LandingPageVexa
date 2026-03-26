@@ -5,32 +5,33 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 import TelemetryTypewriter from './features/TelemetryTypewriter';
 import CursorScheduler from './features/CursorScheduler';
 import DiagnosticShuffler from './features/DiagnosticShuffler';
+import { Calendar, MessageSquare, BarChart3, Shield, Users, Zap } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
   {
     num: '01',
-    title: 'Configure sua Conta',
-    desc: 'Esqueça implementações complexas. Importe seus dados e configure sua equipe em minutos com nossa interface assistida por IA.',
+    title: 'Setup Técnico & Catálogo',
+    desc: 'Importe sua base de clientes e configure seus serviços com durações personalizadas e buffer time em minutos. Zero fricção operacional.',
     color: '#3B82F6',
-    bullets: ['Import automático de dados', 'Setup guiado passo a passo', 'Personalização sem código'],
+    bullets: ['Configuração de Nichos e Categorias', 'Durações e Buffers Inteligentes', 'Import de Clientes via API/CSV'],
     component: TelemetryTypewriter
   },
   {
     num: '02',
-    title: 'Ative os Agendamentos',
-    desc: 'Seu link de agendamento online pronto para rodar. Confirmações automáticas via WhatsApp garantem 0% de atrito no seu dia.',
+    title: 'Operação com Timeline',
+    desc: 'Gerencie sua agenda via Timeline Diária ou Semanal. Bloqueios de horários e lembretes automáticos via WhatsApp mantêm o fluxo perfeito.',
     color: '#A78BFA',
-    bullets: ['Link público personalizável', 'Confirmações automáticas', 'Gestão de lista de espera'],
+    bullets: ['Timeline Semanal Interativa', 'Lembretes 24h/2h via WhatsApp', 'Check-in e No-show Integrados'],
     component: CursorScheduler
   },
   {
     num: '03',
-    title: 'Escale com Dados',
-    desc: 'Dashboards de previsibilidade mostram exatamente para onde seu negócio está indo. Decisões baseadas em lucro real.',
+    title: 'Controle Financeiro & Escala',
+    desc: 'Feche comandas, venda produtos e veja o lucro líquido em tempo real. Comissões calculadas automaticamente para cada profissional.',
     color: '#34D399',
-    bullets: ['Dashboards em tempo real', 'Previsão de receita', 'Alertas financeiros inteligentes'],
+    bullets: ['Fechamento de Comandas PDV', 'Cálculo de Comissões e Adiantamentos', 'Controle de Estoque e Reposição'],
     component: DiagnosticShuffler
   },
 ];

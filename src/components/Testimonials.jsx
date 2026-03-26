@@ -38,7 +38,7 @@ const testimonials = [
     city: 'Curitiba, PR',
     avatar: 'BT',
     color: '#FB923C',
-    quote: 'Fácil de configurar, intuitivo e o suporte é incrível. Setup em menos de 30 minutos e já recebi meu primeiro agendamento automatizado no mesmo dia.',
+    quote: 'A visão de Timeline Semanal é sensacional. O sistema de Buffer Time entre atendimentos salvou nossa equipe do esgotamento. Agora temos um fluxo perfeito.',
     stars: 5,
   },
   {

@@ -16,19 +16,27 @@ const layers = [
   },
   {
     icon: Database,
-    label: 'Camada Financeira',
-    title: 'Controle Total do Caixa',
-    desc: 'Cada pagamento, comissão e despesa registrado automaticamente. Conciliações em tempo real com alertas inteligentes.',
+    label: 'Arquitetura NestJS',
+    title: 'Core Robusto',
+    desc: 'Core robusto construído em Node.js com arquitetura modular, garantindo 99.9% de uptime em operações críticas.',
     accent: '#A78BFA',
     tag: '/ 02',
   },
   {
-    icon: Lock,
-    label: 'Camada de Dados',
-    title: 'Integridade Absoluta',
-    desc: 'Dados criptografados com padrão militar. Backups automáticos, auditoria completa e conformidade total com a LGPD.',
+    icon: Database,
+    label: 'Prisma & PostgreSQL',
+    title: 'Dados de Alta Performance',
+    desc: 'Camada de dados de alta performance com persistência em PostgreSQL e ORM Prisma para consultas ultra-rápidas.',
     accent: '#34D399',
     tag: '/ 03',
+  },
+  {
+    icon: Globe,
+    label: 'Conectividade Global',
+    title: 'API REST Escalável',
+    desc: 'API REST escalável pronta para integrações com gateways de pagamento e provedores oficiais de WhatsApp.',
+    accent: '#F59E0B', // Added a new accent color for the new item
+    tag: '/ 04', // Added a new tag for the new item
   },
 ];
 

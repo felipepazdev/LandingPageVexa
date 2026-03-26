@@ -46,11 +46,11 @@ export default function Footer({ onOpenTrial }) {
             Comece Hoje
           </div>
           <h2 className="text-5xl md:text-6xl lg:text-[5rem] font-display font-bold text-textLight mb-7 leading-tight tracking-tight">
-            Crie e Escale Seu Studio <br />
+            Crie e Escale Seu Salão <br />
             <span className="text-gradient">com Inteligência</span>
           </h2>
           <p className="text-textMuted text-lg max-w-xl mx-auto mb-12 font-light">
-            Junte-se a mais de 10.000 studios que já transformaram seus negócios com a Vexa.
+            Junte-se a mais de 10.000 salões que já transformaram seus negócios com a Vexa.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button
@@ -87,7 +87,7 @@ export default function Footer({ onOpenTrial }) {
               <span className="text-base font-display font-bold text-textLight tracking-widest">VEXA</span>
             </div>
             <p className="text-textMuted text-sm leading-relaxed max-w-sm mb-7 font-light">
-              O sistema de gestão definitivo para estúdios de beleza e barbearias. Tecnologia de precisão para negócios de alto padrão.
+              O sistema de gestão definitivo para salões de beleza e barbearias. Tecnologia de precisão para negócios de alto padrão.
             </p>
             <div className="flex items-center gap-3">
               {socialIcons.map((s) => (

@@ -79,7 +79,7 @@ export default function Philosophy() {
             O Processo Vexa
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-display font-bold text-textLight mb-8 leading-[1.1] tracking-tight">
-            Seu Studio no <span className="text-gradient">Próximo Nível</span> <br />
+            Seu Salão no <span className="text-gradient">Próximo Nível</span> <br />
             de Forma Acelerada
           </h2>
           <p className="text-textMuted text-lg max-w-2xl mx-auto font-light leading-relaxed">
@@ -162,7 +162,7 @@ export default function Philosophy() {
             ))}
           </div>
           <div className="flex-1 text-center md:text-left">
-            <h4 className="text-xl font-display font-bold text-textLight mb-2">Pronto para transformar seu studio?</h4>
+            <h4 className="text-xl font-display font-bold text-textLight mb-2">Pronto para transformar seu salão?</h4>
             <p className="text-textMuted font-light leading-relaxed">Junte-se a milhares de parceiros que já automatizaram 100% da sua rotina operacional com a Vexa.</p>
           </div>
           <button className="btn-primary text-white px-10 py-4 rounded-2xl font-bold flex items-center gap-3 group whitespace-nowrap">

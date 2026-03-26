@@ -18,7 +18,7 @@ const features = [
   {
     icon: MessageCircle,
     title: 'Lembretes Inteligentes',
-    desc: 'O sistema envia notificações automáticas via WhatsApp antes de cada serviço. Reduza o nível de faltas no seu estúdio sem precisar mandar mensagens uma por uma.',
+    desc: 'O sistema envia notificações automáticas via WhatsApp antes de cada serviço. Reduza o nível de faltas no seu salão sem precisar mandar mensagens uma por uma.',
     tag: 'Redução de Faltas',
     accentColor: '#10B981',
     glowColor: 'rgba(16,185,129,0.12)',
@@ -97,7 +97,7 @@ export default function Features() {
             <span className="text-gradient">em Um Só Lugar</span>
           </h2>
           <p className="text-textMuted text-lg max-w-2xl mx-auto font-light leading-relaxed">
-            Abandone os sistemas genéricos e fragmentados. A Vexa integra todas as operações do seu studio em uma plataforma de precisão.
+            Abandone os sistemas genéricos e fragmentados. A Vexa integra todas as operações do seu salão em uma plataforma de precisão.
           </p>
         </div>
 

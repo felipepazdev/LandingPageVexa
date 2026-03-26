@@ -41,7 +41,7 @@ export default function Hero({ onOpenTrial }) {
         {/* Badge */}
         <div className="hero-badge inline-flex items-center gap-2 section-label mb-8">
           <Zap size={11} className="text-accent" />
-          <span>Plataforma de Gestão para Beleza &amp; Barbearias</span>
+          <span>Plataforma de Gestão para Salões de Beleza &amp; Barbearias</span>
         </div>
 
         {/* H1 */}

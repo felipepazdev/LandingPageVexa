@@ -8,35 +8,35 @@ gsap.registerPlugin(ScrollTrigger);
 const layers = [
   {
     icon: RefreshCw,
-    label: 'Camada Operacional',
-    title: 'Automação que Nunca Para',
-    desc: 'Agendamentos, confirmações, lembretes e cancelamentos acontecem sozinhos — 24/7, sem nenhuma intervenção manual.',
+    label: 'Cuidado Automático',
+    title: 'Trabalha Enquanto Você Dorme',
+    desc: 'Esqueça aquela planilha manual. O sistema cuida de tudo sozinho: agenda, mensagens e lembretes para os seus clientes.',
     accent: '#3B82F6',
     tag: '/ 01',
   },
   {
     icon: Database,
-    label: 'Arquitetura NestJS',
-    title: 'Core Robusto',
-    desc: 'Core robusto construído em Node.js com arquitetura modular, garantindo 99.9% de uptime em operações críticas.',
+    label: 'Motor de Alta Velocidade',
+    title: 'Rapidez Surpreendente',
+    desc: 'O sistema abre em qualquer lugar, do computador ao celular, sem travamentos. Nada de ficar esperando a tela carregar.',
     accent: '#A78BFA',
     tag: '/ 02',
   },
   {
     icon: Database,
-    label: 'Prisma & PostgreSQL',
-    title: 'Dados de Alta Performance',
-    desc: 'Camada de dados de alta performance com persistência em PostgreSQL e ORM Prisma para consultas ultra-rápidas.',
+    label: 'Cofre de Segurança',
+    title: 'Seus Dados Super Protegidos',
+    desc: 'Guardamos tudo com carinho: seus clientes, agenda e toda a parte financeira estão no cofre digital mais seguro do mercado.',
     accent: '#34D399',
     tag: '/ 03',
   },
   {
     icon: Globe,
-    label: 'Conectividade Global',
-    title: 'API REST Escalável',
-    desc: 'API REST escalável pronta para integrações com gateways de pagamento e provedores oficiais de WhatsApp.',
-    accent: '#F59E0B', // Added a new accent color for the new item
-    tag: '/ 04', // Added a new tag for the new item
+    label: 'Conectado a Tudo',
+    title: 'Integração Sem Estresse',
+    desc: 'Conectamos a Vexa com o WhatsApp oficial para que as mensagens cheguem na hora, sem bloqueios e sem perda de pacotes.',
+    accent: '#F59E0B',
+    tag: '/ 04',
   },
 ];
 
@@ -69,14 +69,14 @@ export default function Protocol() {
           {/* Left */}
           <div className="proto-left">
             <div className="inline-flex items-center section-label mb-7">
-              O Protocolo Vexa
+              Como a Vexa Cuida de Você
             </div>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-textLight mb-6 leading-tight tracking-tight">
-              Segurança em <br />
-              <span className="text-gradient">Três Camadas</span>
+              Tudo Sempre <br />
+              <span className="text-gradient">Sob Controle</span>
             </h2>
             <p className="text-textMuted text-lg max-w-md font-light leading-relaxed mb-12">
-              Construímos a Vexa com uma arquitetura de três camadas de proteção: Operacional, Financeira e de Dados. Sem pontos únicos de falha.
+              Nossa tecnologia protege o que você tem de mais importante: seu tempo, seus clientes e seu dinheiro. Tudo feito para você focar no que ama.
             </p>
 
             {/* Concentric rings visual */}

@@ -33,9 +33,9 @@ export default function Navbar({ onOpenTrial }) {
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8 text-sm font-sans text-textMuted">
           {[
-            { label: 'Features', href: '#features' },
-            { label: 'Protocolo', href: '#protocol' },
-            { label: 'Como Funciona', href: '#steps' },
+            { label: 'O que Fazemos', href: '#features' },
+            { label: 'Como Cuidamos', href: '#protocol' },
+            { label: 'Passo a Passo', href: '#steps' },
             { label: 'Preços', href: '#pricing' },
           ].map((item) => (
             <a
@@ -66,13 +66,13 @@ export default function Navbar({ onOpenTrial }) {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="absolute top-[72px] left-4 right-4 glass-dark rounded-2xl p-6 flex flex-col gap-5 md:hidden border border-accent/12 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
-          {['Features', 'Protocolo', 'Como Funciona', 'Preços'].map((item, i) => (
-            <a
-              key={item}
-              href={['#features', '#protocol', '#steps', '#pricing'][i]}
+    {/* Mobile Menu */}
+    {mobileOpen && (
+      <div className="absolute top-[72px] left-4 right-4 glass-dark rounded-2xl p-6 flex flex-col gap-5 md:hidden border border-accent/12 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+        {['O que Fazemos', 'Como Cuidamos', 'Passo a Passo', 'Preços'].map((item, i) => (
+          <a
+            key={item}
+            href={['#features', '#protocol', '#steps', '#pricing'][i]}
               className="text-textMuted hover:text-textLight transition-colors text-sm font-sans"
               onClick={() => setMobileOpen(false)}
             >

@@ -12,26 +12,26 @@ gsap.registerPlugin(ScrollTrigger);
 const steps = [
   {
     num: '01',
-    title: 'Setup Técnico & Catálogo',
-    desc: 'Importe sua base de clientes e configure seus serviços com durações personalizadas e buffer time em minutos. Zero fricção operacional.',
+    title: 'Começar é Muito Fácil',
+    desc: 'A gente te ajuda a colocar seus serviços e preços no sistema. Em poucos minutos, tudo já está pronto para o seu primeiro agendamento.',
     color: '#3B82F6',
-    bullets: ['Configuração de Nichos e Categorias', 'Durações e Buffers Inteligentes', 'Import de Clientes via API/CSV'],
+    bullets: ['Configuração sem complicação', 'Preços e tempos do seu jeito', 'Trazemos seus clientes antigos'],
     component: TelemetryTypewriter
   },
   {
     num: '02',
-    title: 'Operação com Timeline',
-    desc: 'Gerencie sua agenda via Timeline Diária ou Semanal. Bloqueios de horários e lembretes automáticos via WhatsApp mantêm o fluxo perfeito.',
+    title: 'Sua Agenda no Automático',
+    desc: 'Você só precisa marcar o horário. O resto a Vexa faz: avisa o cliente, confirma a vinda e tranca o horário na agenda.',
     color: '#A78BFA',
-    bullets: ['Timeline Semanal Interativa', 'Lembretes 24h/2h via WhatsApp', 'Check-in e No-show Integrados'],
+    bullets: ['Agenda visual e colorida', 'Avisos automáticos no WhatsApp', 'Saiba quem confirmou na hora'],
     component: CursorScheduler
   },
   {
     num: '03',
-    title: 'Controle Financeiro & Escala',
-    desc: 'Feche comandas, venda produtos e veja o lucro líquido em tempo real. Comissões calculadas automaticamente para cada profissional.',
+    title: 'Dinheiro no Bolso, Sem Erro',
+    desc: 'No final do dia, você fecha o caixa com um clique. Saber quanto cada um ganhou e o que sobrou de lucro nunca foi tão simples.',
     color: '#34D399',
-    bullets: ['Fechamento de Comandas PDV', 'Cálculo de Comissões e Adiantamentos', 'Controle de Estoque e Reposição'],
+    bullets: ['Controle de vendas rápido', 'Comissões feitas sozinhas', 'Lucro real na ponta do lápis'],
     component: DiagnosticShuffler
   },
 ];

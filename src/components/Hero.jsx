@@ -47,19 +47,16 @@ export default function Hero({ onOpenTrial }) {
         {/* H1 */}
         <h1 className="hero-h1 font-display font-bold leading-[1.0] tracking-tight mb-7 w-full">
           <span className="block text-5xl md:text-7xl lg:text-[6rem] text-textLight">
-            A Inteligência que
+            Chega de Stress
           </span>
           <span className="block text-5xl md:text-7xl lg:text-[6rem] text-gradient mt-2">
-            Escala Seu Salão
-          </span>
-          <span className="block text-5xl md:text-7xl lg:text-[6rem] text-textLight/85 mt-2">
-            de Beleza
+            na Sua Agenda
           </span>
         </h1>
 
         {/* Subtitle */}
         <p className="hero-sub text-lg md:text-xl text-textMuted max-w-2xl mx-auto mb-11 font-light leading-relaxed">
-          O SaaS definitivo para gestão técnica e financeira. Timeline semanal inteligente, controle de comissões automático e notificações via WhatsApp — tudo integrado em uma única plataforma de alta precisão.
+          O sistema que cuida de tudo para você: da agenda que não fura até o dinheiro que entra no bolso. Tudo simples, rápido e direto no seu WhatsApp. Do jeito que você sempre quis.
         </p>
 
         {/* CTA Buttons */}

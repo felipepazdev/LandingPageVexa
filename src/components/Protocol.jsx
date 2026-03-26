@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Lock, RefreshCw, Database, ArrowRight } from 'lucide-react';
+import { Lock, RefreshCw, Database, Globe, ArrowRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 

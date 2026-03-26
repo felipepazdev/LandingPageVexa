@@ -3,10 +3,10 @@ import { Check, Zap, Shield, Star, ArrowRight } from 'lucide-react';
 
 const allFeatures = [
   'Agendamentos Ilimitados',
-  'Gestão Financeira Full Stack',
+  'Gestão Financeira',
   'Dashboards de Previsibilidade',
   'Checkout e Comissionamento Automático',
-  'CRM de Clientes Completo',
+  'Lista de Clientes Completa',
   'Notificações via WhatsApp',
   'Relatórios de Lucratividade',
   'Suporte Prioritário 24/7',
@@ -48,7 +48,7 @@ export default function Pricing({ onOpenTrial }) {
                   <Zap size={9} /> MAIS POPULAR
                 </div>
                 <h3 className="text-2xl font-display font-bold text-textLight">Vexa Unlimited</h3>
-                <p className="text-textMuted text-sm mt-1.5">Tudo para crescer seu studio</p>
+                <p className="text-textMuted text-sm mt-1.5">Tudo para crescer seu salão</p>
               </div>
               <div className="md:text-right">
                 <div className="text-[10px] font-mono text-textDim mb-1 tracking-widest uppercase">A partir de</div>
@@ -99,7 +99,7 @@ export default function Pricing({ onOpenTrial }) {
         {/* Trust logos */}
         <div className="mt-20 text-center">
           <p className="text-textDim text-[10px] font-mono uppercase tracking-[0.35em] mb-8">
-            Usado por Studios em todo o Brasil
+            Usado por Salões em todo o Brasil
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8">
             {['Studio Gold', 'Barbearia Elite', 'Looks Premium', 'Salão Chic', 'Top Cuts'].map((b) => (

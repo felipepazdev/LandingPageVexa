@@ -80,16 +80,16 @@ export default function Hero({ onOpenTrial }) {
         </div>
 
         {/* Stats row */}
-        <div className="hero-stats flex flex-wrap items-center justify-center gap-10 mb-20">
+        <div className="hero-stats flex flex-wrap items-center justify-center gap-4 mb-20">
           {[
             { value: '10K+', label: 'Studios Ativos' },
             { value: '1M+', label: 'Agendamentos' },
             { value: '5X', label: 'Mais Produtividade' },
             { value: '500+', label: 'Cidades' },
           ].map((s, i) => (
-            <div key={s.label} className="text-center">
+            <div key={s.label} className="glass-card px-8 py-5 rounded-2xl min-w-[160px] border border-white/5 hover:border-accent/20 transition-colors cursor-default">
               <div className="text-3xl font-display font-bold text-textLight tracking-tight">{s.value}</div>
-              <div className="text-xs text-textMuted mt-1 font-mono tracking-wider uppercase">{s.label}</div>
+              <div className="text-[10px] text-textMuted mt-1.5 font-mono tracking-widest uppercase">{s.label}</div>
             </div>
           ))}
         </div>

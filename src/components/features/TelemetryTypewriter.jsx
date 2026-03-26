@@ -42,8 +42,8 @@ export default function TelemetryTypewriter({ isLight }) {
   }, [charIndex, msgIndex]);
 
   return (
-    <div className={`flex flex-col p-8 h-full min-h-[350px] rounded-3xl relative overflow-hidden ${isLight ? 'bg-white' : 'bg-[#161622]'}`}>
-      <div className={`absolute top-4 left-4 font-mono text-[10px] uppercase tracking-[0.3em] flex items-center gap-2 ${isLight ? 'text-black/30' : 'text-textLight/50'}`}>
+    <div className={`flex flex-col p-8 h-full min-h-[350px] rounded-3xl relative overflow-hidden ${isLight ? 'bg-white' : 'bg-secondary'}`}>
+      <div className={`absolute top-4 left-4 font-mono text-[10px] uppercase tracking-[0.3em] flex items-center gap-2 ${isLight ? 'text-black/30' : 'text-textMuted'}`}>
         <div className="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_8px_#C9A84C]"></div>
         Live Feed
       </div>
@@ -54,8 +54,8 @@ export default function TelemetryTypewriter({ isLight }) {
       </div>
       
       <div className="mt-12 text-center">
-        <h3 className={`text-2xl font-serif mb-2 ${isLight ? 'text-textDark' : 'text-textLight'}`}>Organização Fluída</h3>
-        <p className={`font-sans text-xs uppercase tracking-widest ${isLight ? 'text-black/40' : 'text-textLight/60'}`}>Sem conflitos de agenda</p>
+        <h3 className={`text-2xl font-display font-bold mb-2 ${isLight ? 'text-textDark' : 'text-textLight'}`}>Organização Fluída</h3>
+        <p className={`font-sans text-xs uppercase tracking-widest ${isLight ? 'text-black/40' : 'text-textMuted'}`}>Sem conflitos de agenda</p>
       </div>
     </div>
   );

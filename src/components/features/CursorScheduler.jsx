@@ -33,7 +33,7 @@ export default function CursorScheduler({ isLight }) {
   }, [isLight]);
 
   return (
-    <div className={`flex flex-col p-8 h-full min-h-[350px] rounded-3xl relative overflow-hidden ${isLight ? 'bg-white' : 'bg-[#161622]'}`}>
+    <div className={`flex flex-col p-8 h-full min-h-[350px] rounded-3xl relative overflow-hidden ${isLight ? 'bg-white' : 'bg-secondary'}`}>
       <div className={`absolute top-4 left-4 font-mono text-[10px] uppercase tracking-[0.3em] ${isLight ? 'text-black/30' : 'text-textLight/50'}`}>
         Predictability Engine
       </div>
@@ -60,8 +60,8 @@ export default function CursorScheduler({ isLight }) {
       </div>
       
       <div className="mt-12 text-center">
-        <h3 className={`text-2xl font-serif mb-2 ${isLight ? 'text-textDark' : 'text-textLight'}`}>Previsão Real</h3>
-        <p className={`font-sans text-xs uppercase tracking-widest ${isLight ? 'text-black/40' : 'text-textLight/60'}`}>Dados que movem o estúdio</p>
+        <h3 className={`text-2xl font-display font-bold mb-2 ${isLight ? 'text-textDark' : 'text-textLight'}`}>Previsão Real</h3>
+        <p className={`font-sans text-xs uppercase tracking-widest ${isLight ? 'text-black/40' : 'text-textMuted'}`}>Dados que movem o estúdio</p>
       </div>
     </div>
   );

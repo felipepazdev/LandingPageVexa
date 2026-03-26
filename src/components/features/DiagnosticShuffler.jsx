@@ -26,7 +26,7 @@ export default function DiagnosticShuffler({ isLight }) {
   }, []);
 
   return (
-    <div className={`flex flex-col items-center justify-center p-8 h-full min-h-[350px] rounded-3xl relative overflow-hidden ${isLight ? 'bg-white' : 'bg-[#161622]'}`}>
+    <div className={`flex flex-col items-center justify-center p-8 h-full min-h-[350px] rounded-3xl relative overflow-hidden ${isLight ? 'bg-white' : 'bg-secondary'}`}>
       <div className={`absolute top-4 left-4 font-mono text-[10px] uppercase tracking-[0.3em] ${isLight ? 'text-black/30' : 'text-textLight/50'}`}>
         Financial Engine
       </div>
@@ -41,7 +41,7 @@ export default function DiagnosticShuffler({ isLight }) {
           return (
             <div 
               key={card.id}
-              className={`absolute top-0 left-0 w-full border rounded-2xl p-6 shadow-xl flex items-center justify-between ${isLight ? 'bg-white border-black/5' : 'bg-[#1A1A24] border-white/5'}`}
+              className={`absolute top-0 left-0 w-full border rounded-2xl p-6 shadow-xl flex items-center justify-between ${isLight ? 'bg-white border-black/5' : 'bg-tertiary/90 border-white/5'}`}
               style={{
                 transform: `translateY(${yOffset}px) scale(${scale})`,
                 opacity: opacity,
@@ -64,8 +64,8 @@ export default function DiagnosticShuffler({ isLight }) {
       </div>
       
       <div className="mt-12 text-center z-10">
-        <h3 className={`text-2xl font-serif mb-2 ${isLight ? 'text-textDark' : 'text-textLight'}`}>Controle Total</h3>
-        <p className={`font-sans text-xs uppercase tracking-widest ${isLight ? 'text-black/40' : 'text-textLight/60'}`}>Financeiro impecável</p>
+        <h3 className={`text-2xl font-display font-bold mb-2 ${isLight ? 'text-textDark' : 'text-textLight'}`}>Controle Total</h3>
+        <p className={`font-sans text-xs uppercase tracking-widest ${isLight ? 'text-black/40' : 'text-textMuted'}`}>Financeiro impecável</p>
       </div>
     </div>
   );

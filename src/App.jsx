@@ -16,7 +16,6 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-primary">
-      <div className="noise-overlay pointer-events-none" />
 
       <Navbar onOpenTrial={openTrial} />
 

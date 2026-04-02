@@ -97,7 +97,7 @@ export default function Protocol() {
                 style={{ width: 100, height: 100, marginLeft: -50, marginTop: -50 }}
               />
               {/* Center */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-gradient-to-br from-accent to-accentGlow flex items-center justify-center shadow-glow-blue">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-gradient-to-br from-accent to-accentGlow flex items-center justify-center shadow-glow-cyan">
                 <Lock size={22} className="text-white" />
               </div>
               {/* Orbiting dots */}

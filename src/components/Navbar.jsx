@@ -22,7 +22,7 @@ export default function Navbar({ onOpenTrial }) {
       >
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 cursor-pointer group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accentGlow flex items-center justify-center shadow-glow-blue-sm">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accentGlow flex items-center justify-center shadow-glow-cyan-sm">
             <span className="text-white font-bold text-sm font-mono">V</span>
           </div>
           <span className="text-base font-display font-bold tracking-widest text-textLight">

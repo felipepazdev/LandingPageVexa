@@ -28,9 +28,9 @@ export default function Hero({ onOpenTrial }) {
         {/* Grid */}
         <div className="absolute inset-0 bg-grid opacity-100" />
         {/* Radial glow top-center */}
-        <div className="glow-orb absolute top-[-15%] left-[50%] -translate-x-1/2 w-[900px] h-[600px] bg-blue-600/[0.09]" />
-        <div className="glow-orb absolute top-[5%] left-[15%] w-[500px] h-[500px] bg-blue-500/[0.04]" />
-        <div className="glow-orb absolute top-[20%] right-[5%] w-[350px] h-[350px] bg-indigo-500/[0.04]" />
+        <div className="glow-orb absolute top-[-15%] left-[50%] -translate-x-1/2 w-[900px] h-[600px] bg-accent/[0.09]" />
+        <div className="glow-orb absolute top-[5%] left-[15%] w-[500px] h-[500px] bg-accent/[0.04]" />
+        <div className="glow-orb absolute top-[20%] right-[5%] w-[350px] h-[350px] bg-accentGlow/[0.04]" />
         {/* Fade to black at bottom */}
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-primary to-transparent" />
       </div>

@@ -70,7 +70,7 @@ export default function Philosophy() {
       {/* Background Decor */}
       <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
       <div className="absolute top-0 right-0 w-[600px] h-[500px] bg-accent/[0.03] blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-blue-600/[0.04] blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-accent/[0.04] blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}

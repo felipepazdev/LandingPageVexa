@@ -81,7 +81,7 @@ export default function Footer({ onOpenTrial }) {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accentGlow flex items-center justify-center shadow-glow-blue-sm">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accentGlow flex items-center justify-center shadow-glow-cyan-sm">
                 <span className="text-white font-bold text-sm font-mono">V</span>
               </div>
               <span className="text-base font-display font-bold text-textLight tracking-widest">VEXA</span>

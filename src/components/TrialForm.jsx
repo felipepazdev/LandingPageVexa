@@ -45,7 +45,7 @@ export default function TrialForm({ isOpen, onClose }) {
             <Zap size={10} /> TRIAL GRATUITO — 7 DIAS
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-textLight mb-2">
-            Ative seu <span className="text-gradient-blue">Acesso Grátis</span>
+            Ative seu <span className="text-gradient-cyan">Acesso Grátis</span>
           </h2>
           <p className="text-textMuted text-sm font-light">
             Preencha os dados abaixo e comece a usar imediatamente.

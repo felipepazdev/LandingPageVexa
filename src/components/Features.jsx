@@ -77,9 +77,12 @@ export default function Features() {
         scrollTrigger: { trigger: sectionRef.current, start: 'top 85%' },
         y: 40, opacity: 0, duration: 0.9, ease: 'power3.out',
       });
-      gsap.from('.feat-card', {
-        scrollTrigger: { trigger: '.feat-card', start: 'top 85%', toggleActions: 'play none none none' },
-        y: 40, opacity: 0, stagger: 0.1, duration: 0.8, ease: 'power3.out',
+      gsap.utils.toArray('.feat-card').forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: 'top 90%' },
+          y: 40, opacity: 0, duration: 0.8, ease: 'power3.out',
+          delay: (i % 3) * 0.15
+        });
       });
     }, sectionRef);
     return () => ctx.revert();

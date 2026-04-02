@@ -57,9 +57,12 @@ export default function Protocol() {
         scrollTrigger: { trigger: containerRef.current, start: 'top 65%' },
         y: 20, opacity: 0, stagger: 0.1, duration: 0.6, ease: 'power3.out', delay: 0.2,
       });
-      gsap.from('.protocol-item', {
-        scrollTrigger: { trigger: '.protocol-item', start: 'top 75%' },
-        y: 40, opacity: 0, stagger: 0.15, duration: 0.8, ease: 'power3.out',
+      gsap.utils.toArray('.protocol-item').forEach((item, index) => {
+        gsap.from(item, {
+          scrollTrigger: { trigger: item, start: 'top 90%' },
+          y: 40, opacity: 0, duration: 0.8, ease: 'power3.out',
+          delay: index * 0.15
+        });
       });
       gsap.from('.proto-visual', {
         scrollTrigger: { trigger: '.proto-visual', start: 'top 75%' },

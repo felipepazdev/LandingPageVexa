@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Calendar, DollarSign, BarChart3, Users, Shield, Zap, ArrowRight, MessageCircle } from 'lucide-react';
+import { Calendar, DollarSign, BarChart3, Users, Shield, Zap, ArrowRight, MessageCircle, CheckCircle2 } from 'lucide-react';
+import WhatsAppDemo from './features/WhatsAppDemo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -163,8 +164,50 @@ export default function Features() {
           })}
         </div>
 
+        {/* Interactive Demo Section */}
+        <div className="mt-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="order-2 lg:order-1">
+             <WhatsAppDemo />
+          </div>
+          <div className="order-1 lg:order-2 space-y-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-100 text-green-600 text-[10px] font-bold uppercase tracking-wider">
+               <CheckCircle2 size={12} />
+               Automação Inteligente
+            </div>
+            <h3 className="text-3xl md:text-4xl font-display font-bold text-textLight leading-tight">
+               Seu salão no <span className="text-accent">Piloto Automático</span>
+            </h3>
+            <p className="text-textMuted text-lg font-light leading-relaxed">
+               O Vexa identifica novos agendamentos e cuida de toda a comunicação. 
+               Desde a confirmação instantânea até o lembrete de 2h antes, 
+               tudo acontece via WhatsApp sem você tocar no celular.
+            </p>
+            <ul className="space-y-4">
+               {[
+                 'Confirmação instantânea de horário',
+                 'Lembretes automáticos (reduz faltas em 40%)',
+                 'Pesquisa de satisfação pós-atendimento',
+                 'Link de reagendamento integrado'
+               ].map((item, i) => (
+                 <li key={i} className="flex items-center gap-3 text-sm text-textLight font-medium">
+                    <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center">
+                       <Check size={12} className="text-accent" />
+                    </div>
+                    {item}
+                 </li>
+               ))}
+            </ul>
+            <div className="pt-6">
+               <button className="btn-primary px-8 py-4 rounded-2xl flex items-center gap-3 font-bold group">
+                  Começar meu teste grátis
+                  <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+               </button>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom CTA bar */}
-        <div className="mt-14 bg-white border border-gray-100 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-card">
+        <div className="mt-24 bg-white border border-gray-100 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-card">
           <div className="flex items-center gap-5">
             <div className="w-12 h-12 rounded-2xl bg-accent/8 border border-accent/15 flex items-center justify-center shadow-sm">
               <MessageCircle size={22} className="text-accent" />

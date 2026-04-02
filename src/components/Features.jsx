@@ -11,54 +11,60 @@ const features = [
     title: 'Sua Agenda no Controle',
     desc: 'Esqueça os horários embolados. Com a Vexa, os atendimentos se encaixam do jeito certo e sobra tempo para você respirar.',
     tag: 'Tudo Organizado',
-    accentColor: '#3B82F6',
-    glowColor: 'rgba(59,130,246,0.12)',
-    borderHover: 'rgba(59,130,246,0.3)',
+    accentColor: '#0DA3AD',
+    bgColor: 'rgba(13,163,173,0.06)',
+    borderHover: 'rgba(13,163,173,0.25)',
+    glowColor: 'rgba(13,163,173,0.08)',
   },
   {
     icon: MessageCircle,
     title: 'Lembretes Inteligentes',
     desc: 'O sistema envia notificações automáticas via WhatsApp antes de cada serviço. Reduza o nível de faltas no seu salão sem precisar mandar mensagens uma por uma.',
     tag: 'Redução de Faltas',
-    accentColor: '#10B981',
-    glowColor: 'rgba(16,185,129,0.12)',
-    borderHover: 'rgba(16,185,129,0.3)',
+    accentColor: '#059669',
+    bgColor: 'rgba(5,150,105,0.06)',
+    borderHover: 'rgba(5,150,105,0.25)',
+    glowColor: 'rgba(5,150,105,0.08)',
   },
   {
     icon: DollarSign,
     title: 'Grana Sem Complicação',
     desc: 'Comissões calculadas na hora, sem dor de cabeça no final do mês. Dinheiro entra, o sistema anota e você descansa.',
     tag: 'Finanças Simples',
-    accentColor: '#8B5CF6',
-    glowColor: 'rgba(139,92,246,0.12)',
-    borderHover: 'rgba(139,92,246,0.3)',
+    accentColor: '#7C3AED',
+    bgColor: 'rgba(124,58,237,0.06)',
+    borderHover: 'rgba(124,58,237,0.25)',
+    glowColor: 'rgba(124,58,237,0.08)',
   },
   {
     icon: Shield,
     title: 'Estoque Sempre em Dia',
     desc: 'O shampoo acabou? A tinta sumiu? O sistema te avisa quando algo está terminando para você nunca ficar na mão.',
     tag: 'Sem Falta de Produtos',
-    accentColor: '#F97316',
-    glowColor: 'rgba(249,115,22,0.12)',
-    borderHover: 'rgba(249,115,22,0.3)',
+    accentColor: '#EA580C',
+    bgColor: 'rgba(234,88,12,0.06)',
+    borderHover: 'rgba(234,88,12,0.25)',
+    glowColor: 'rgba(234,88,12,0.08)',
   },
   {
     icon: BarChart3,
     title: 'Painel do Dono(a)',
     desc: 'Saiba quais são os seus melhores serviços e os clientes que mais voltam — tudo fácil de ver em um só lugar.',
     tag: 'Destaques',
-    accentColor: '#EC4899',
-    glowColor: 'rgba(236,72,153,0.12)',
-    borderHover: 'rgba(236,72,153,0.3)',
+    accentColor: '#DB2777',
+    bgColor: 'rgba(219,39,119,0.06)',
+    borderHover: 'rgba(219,39,119,0.25)',
+    glowColor: 'rgba(219,39,119,0.08)',
   },
   {
     icon: Zap,
     title: 'Vender é Moleza',
     desc: 'Venda serviços e produtos em um piscar de olhos. Feche o caixa sem precisar de papel ou calculadoras malucas.',
     tag: 'Rapidez no PDV',
-    accentColor: '#FACC15',
-    glowColor: 'rgba(250,204,21,0.12)',
-    borderHover: 'rgba(250,204,21,0.3)',
+    accentColor: '#D97706',
+    bgColor: 'rgba(217,119,6,0.06)',
+    borderHover: 'rgba(217,119,6,0.25)',
+    glowColor: 'rgba(217,119,6,0.08)',
   },
 ];
 
@@ -80,17 +86,17 @@ export default function Features() {
   }, []);
 
   return (
-    <section id="features" ref={sectionRef} className="relative w-full py-32 px-4 md:px-8 bg-primary overflow-hidden">
+    <section id="features" ref={sectionRef} className="relative w-full py-32 px-4 md:px-8 bg-secondary overflow-hidden">
       {/* Background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[250px] bg-accent/[0.05] blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute inset-0 bg-grid opacity-100 pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-accent/[0.04] blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="feat-header text-center mb-20">
           <div className="inline-flex items-center section-label mb-7">
             <Zap size={11} className="mr-2 text-accent" />
-            Features
+            Funcionalidades
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-bold text-textLight mb-6 leading-tight tracking-tight">
             Tudo que Você Precisa <br />
@@ -102,17 +108,16 @@ export default function Features() {
         </div>
 
         {/* Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((f) => {
             const Icon = f.icon;
             return (
               <div
                 key={f.title}
-                className="feat-card feature-card glass-card rounded-2xl p-7 border border-border/70 cursor-pointer group"
-                style={{ '--hover-border': f.borderHover }}
+                className="feat-card feature-card rounded-2xl p-7 cursor-pointer group"
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = f.borderHover;
-                  e.currentTarget.style.boxShadow = `0 24px 64px rgba(0,0,0,0.5), 0 0 50px ${f.glowColor}`;
+                  e.currentTarget.style.boxShadow = `0 12px 40px rgba(0,0,0,0.08), 0 0 40px ${f.glowColor}`;
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = '';
@@ -122,14 +127,14 @@ export default function Features() {
                 {/* Icon */}
                 <div
                   className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-                  style={{ background: `${f.accentColor}15`, border: `1px solid ${f.accentColor}25` }}
+                  style={{ background: f.bgColor, border: `1px solid ${f.accentColor}20` }}
                 >
                   <Icon size={20} style={{ color: f.accentColor }} />
                 </div>
 
                 {/* Tag */}
                 <span
-                  className="text-[9px] font-mono tracking-[0.3em] uppercase mb-3 block"
+                  className="text-[9px] font-mono tracking-[0.3em] uppercase mb-3 block font-medium"
                   style={{ color: f.accentColor }}
                 >
                   {f.tag}
@@ -154,9 +159,9 @@ export default function Features() {
         </div>
 
         {/* Bottom CTA bar */}
-        <div className="mt-16 glass-panel rounded-2xl p-6 border border-border/50 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-14 glass-panel rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-accent/8 border border-accent/15 flex items-center justify-center">
               <MessageCircle size={18} className="text-accent" />
             </div>
             <div>
@@ -164,7 +169,7 @@ export default function Features() {
               <p className="text-textMuted text-xs mt-0.5">Nosso time responde em menos de 5 minutos via WhatsApp</p>
             </div>
           </div>
-          <button className="btn-ghost text-textMuted hover:text-textLight px-6 py-2.5 rounded-xl font-sans text-sm flex items-center gap-2 flex-shrink-0">
+          <button className="btn-ghost px-6 py-2.5 rounded-xl font-sans text-sm flex items-center gap-2 flex-shrink-0">
             Falar com um especialista <ArrowRight size={13} />
           </button>
         </div>

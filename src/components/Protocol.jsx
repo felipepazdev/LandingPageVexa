@@ -11,7 +11,7 @@ const layers = [
     label: 'Cuidado Automático',
     title: 'Trabalha Enquanto Você Dorme',
     desc: 'Esqueça aquela planilha manual. O sistema cuida de tudo sozinho: agenda, mensagens e lembretes para os seus clientes.',
-    accent: '#3B82F6',
+    accent: '#0DA3AD',
     tag: '/ 01',
   },
   {
@@ -19,7 +19,7 @@ const layers = [
     label: 'Motor de Alta Velocidade',
     title: 'Rapidez Surpreendente',
     desc: 'O sistema abre em qualquer lugar, do computador ao celular, sem travamentos. Nada de ficar esperando a tela carregar.',
-    accent: '#A78BFA',
+    accent: '#7C3AED',
     tag: '/ 02',
   },
   {
@@ -27,7 +27,7 @@ const layers = [
     label: 'Cofre de Segurança',
     title: 'Seus Dados Super Protegidos',
     desc: 'Guardamos tudo com carinho: seus clientes, agenda e toda a parte financeira estão no cofre digital mais seguro do mercado.',
-    accent: '#34D399',
+    accent: '#059669',
     tag: '/ 03',
   },
   {
@@ -35,7 +35,7 @@ const layers = [
     label: 'Conectado a Tudo',
     title: 'Integração Sem Estresse',
     desc: 'Conectamos a Vexa com o WhatsApp oficial para que as mensagens cheguem na hora, sem bloqueios e sem perda de pacotes.',
-    accent: '#F59E0B',
+    accent: '#D97706',
     tag: '/ 04',
   },
 ];
@@ -58,10 +58,10 @@ export default function Protocol() {
   }, []);
 
   return (
-    <section id="protocol" ref={containerRef} className="relative w-full py-32 px-4 md:px-8 bg-primary overflow-hidden">
+    <section id="protocol" ref={containerRef} className="relative w-full py-32 px-4 md:px-8 bg-secondary overflow-hidden">
       {/* Background */}
-      <div className="absolute bottom-0 right-0 w-[700px] h-[500px] bg-accent/[0.04] blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute inset-0 bg-grid opacity-70 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-accent/[0.04] blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-50 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-16 items-center">
@@ -83,17 +83,17 @@ export default function Protocol() {
             <div className="relative w-56 h-56">
               {/* Outer ring */}
               <div
-                className="spin-slow absolute top-1/2 left-1/2 rounded-full border border-dashed border-accent/15"
+                className="spin-slow absolute top-1/2 left-1/2 rounded-full border border-dashed border-accent/20"
                 style={{ width: 220, height: 220, marginLeft: -110, marginTop: -110 }}
               />
               {/* Middle ring */}
               <div
-                className="spin-slow-reverse absolute top-1/2 left-1/2 rounded-full border border-accent/20"
+                className="spin-slow-reverse absolute top-1/2 left-1/2 rounded-full border border-accent/25"
                 style={{ width: 160, height: 160, marginLeft: -80, marginTop: -80 }}
               />
               {/* Inner ring */}
               <div
-                className="absolute top-1/2 left-1/2 rounded-full border border-accent/30"
+                className="absolute top-1/2 left-1/2 rounded-full border border-accent/35 bg-accent/[0.03]"
                 style={{ width: 100, height: 100, marginLeft: -50, marginTop: -50 }}
               />
               {/* Center */}
@@ -102,9 +102,9 @@ export default function Protocol() {
               </div>
               {/* Orbiting dots */}
               {[
-                { angle: 0, color: '#3B82F6' },
-                { angle: 120, color: '#A78BFA' },
-                { angle: 240, color: '#34D399' },
+                { angle: 0, color: '#0DA3AD' },
+                { angle: 120, color: '#7C3AED' },
+                { angle: 240, color: '#059669' },
               ].map((d, i) => (
                 <div
                   key={i}
@@ -112,7 +112,7 @@ export default function Protocol() {
                   style={{
                     transform: `translate(-50%, -50%) rotate(${d.angle}deg) translateX(80px)`,
                     background: d.color,
-                    boxShadow: `0 0 12px ${d.color}`,
+                    boxShadow: `0 0 8px ${d.color}60`,
                   }}
                 />
               ))}
@@ -126,10 +126,10 @@ export default function Protocol() {
               return (
                 <div
                   key={l.label}
-                  className="protocol-item glass-card rounded-2xl p-6 border border-border/70 transition-all duration-300 relative overflow-hidden group cursor-pointer"
+                  className="protocol-item glass-card rounded-2xl p-6 transition-all duration-300 relative overflow-hidden group cursor-pointer"
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = `${l.accent}30`;
-                    e.currentTarget.style.boxShadow = `0 20px 50px rgba(0,0,0,0.4), 0 0 40px ${l.accent}10`;
+                    e.currentTarget.style.borderColor = `${l.accent}25`;
+                    e.currentTarget.style.boxShadow = `0 8px 32px rgba(0,0,0,0.08), 0 0 32px ${l.accent}12`;
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.borderColor = '';
@@ -145,13 +145,13 @@ export default function Protocol() {
                   <div className="pl-3 flex items-start gap-4">
                     <div
                       className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                      style={{ background: `${l.accent}15`, border: `1px solid ${l.accent}25` }}
+                      style={{ background: `${l.accent}10`, border: `1px solid ${l.accent}20` }}
                     >
                       <Icon size={17} style={{ color: l.accent }} />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-1.5">
-                        <span className="text-[10px] font-mono tracking-wider" style={{ color: `${l.accent}80` }}>{l.label}</span>
+                        <span className="text-[10px] font-mono tracking-wider font-medium" style={{ color: `${l.accent}90` }}>{l.label}</span>
                         <span className="text-[10px] font-mono text-textDim">{l.tag}</span>
                       </div>
                       <h4 className="text-sm font-bold text-textLight mb-1.5">{l.title}</h4>
@@ -164,7 +164,7 @@ export default function Protocol() {
 
             {/* CTA */}
             <div className="mt-2 flex items-center justify-end">
-              <button className="flex items-center gap-2 text-accentLight text-xs font-mono tracking-wider hover:gap-3 transition-all duration-200">
+              <button className="flex items-center gap-2 text-accent text-xs font-mono tracking-wider hover:gap-3 transition-all duration-200 font-medium">
                 Ver documentação de segurança <ArrowRight size={12} />
               </button>
             </div>

@@ -14,10 +14,10 @@ const allFeatures = [
 
 export default function Pricing({ onOpenTrial }) {
   return (
-    <section id="pricing" className="relative w-full py-32 px-4 md:px-8 bg-primary overflow-hidden">
+    <section id="pricing" className="relative w-full py-32 px-4 md:px-8 bg-white overflow-hidden">
       {/* Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-accent/[0.06] blur-[160px] rounded-full pointer-events-none" />
-      <div className="absolute inset-0 bg-grid opacity-70 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-accent/[0.05] blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-40 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
@@ -37,14 +37,14 @@ export default function Pricing({ onOpenTrial }) {
 
         {/* Pricing card */}
         <div className="max-w-[520px] mx-auto">
-          <div className="pricing-highlight rounded-3xl p-8 md:p-10 relative overflow-hidden">
+          <div className="pricing-highlight rounded-3xl p-8 md:p-10 relative overflow-hidden bg-white">
             {/* Top glow line */}
-            <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent" />
 
             {/* Badge + Header */}
             <div className="flex flex-col md:flex-row md:items-start justify-between mb-8 gap-6">
               <div>
-                <div className="inline-flex items-center gap-2 bg-accent/12 text-accentLight text-[10px] font-mono tracking-widest px-3 py-1.5 rounded-full border border-accent/20 mb-4">
+                <div className="inline-flex items-center gap-2 bg-accent/8 text-accent text-[10px] font-mono tracking-widest px-3 py-1.5 rounded-full border border-accent/20 mb-4 font-bold">
                   <Zap size={9} /> MAIS POPULAR
                 </div>
                 <h3 className="text-2xl font-display font-bold text-textLight">Vexa Unlimited</h3>
@@ -68,8 +68,8 @@ export default function Pricing({ onOpenTrial }) {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
               {allFeatures.map((f) => (
                 <li key={f} className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center flex-shrink-0">
-                    <Check size={10} className="text-accentLight" />
+                  <div className="w-5 h-5 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
+                    <Check size={10} className="text-accent" />
                   </div>
                   <span className="text-sm text-textMuted">{f}</span>
                 </li>
@@ -79,7 +79,7 @@ export default function Pricing({ onOpenTrial }) {
             {/* CTA */}
             <button
               onClick={onOpenTrial}
-              className="btn-primary w-full text-white py-4 rounded-xl font-bold text-base tracking-wide mb-4 flex items-center justify-center gap-2.5 group"
+              className="btn-primary w-full py-4 rounded-xl font-bold text-base tracking-wide mb-4 flex items-center justify-center gap-2.5 group"
             >
               Ativar Trial Grátis — 7 Dias
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -90,7 +90,7 @@ export default function Pricing({ onOpenTrial }) {
 
             {/* Security */}
             <div className="mt-7 flex items-center justify-center gap-2 text-[10px] text-textDim">
-              <Shield size={11} />
+              <Shield size={11} className="text-accent" />
               <span>Dados protegidos · Cancele quando quiser · Suporte em português</span>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function Pricing({ onOpenTrial }) {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8">
             {['Studio Gold', 'Barbearia Elite', 'Looks Premium', 'Salão Chic', 'Top Cuts'].map((b) => (
-              <div key={b} className="text-textDim/40 font-display font-bold text-sm tracking-wider">
+              <div key={b} className="text-textMuted/50 font-display font-bold text-sm tracking-wider">
                 {b}
               </div>
             ))}

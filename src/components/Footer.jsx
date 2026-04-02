@@ -34,11 +34,11 @@ const socialIcons = [
 
 export default function Footer({ onOpenTrial }) {
   return (
-    <footer className="relative w-full bg-primary border-t border-border/40 overflow-hidden">
+    <footer className="relative w-full bg-secondary border-t border-border overflow-hidden">
       {/* ── CTA Banner ── */}
       <div className="relative py-32 px-4 md:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-grid opacity-50 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-accent/[0.07] blur-[130px] rounded-full pointer-events-none" />
+        <div className="absolute inset-0 bg-grid opacity-40 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-accent/[0.06] blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center section-label mb-8">
@@ -55,19 +55,19 @@ export default function Footer({ onOpenTrial }) {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={onOpenTrial}
-              className="btn-primary text-white px-9 py-4 rounded-xl font-bold text-base flex items-center gap-2.5 group"
+              className="btn-primary px-9 py-4 rounded-xl font-bold text-base flex items-center gap-2.5 group"
             >
               Começar Grátis Agora
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="btn-ghost text-textMuted hover:text-textLight px-8 py-4 rounded-xl font-semibold text-sm transition-all">
+            <button className="btn-ghost px-8 py-4 rounded-xl font-semibold text-sm transition-all">
               Falar com Vendas
             </button>
           </div>
 
           {/* Watermark */}
           <div
-            className="mt-16 text-[7rem] md:text-[11rem] font-display font-bold text-textLight/[0.02] leading-none select-none pointer-events-none"
+            className="mt-16 text-[7rem] md:text-[11rem] font-display font-bold text-textLight/[0.04] leading-none select-none pointer-events-none"
             style={{ letterSpacing: '-0.03em' }}
           >
             VEXA
@@ -76,12 +76,12 @@ export default function Footer({ onOpenTrial }) {
       </div>
 
       {/* ── Footer links ── */}
-      <div className="border-t border-border/30 px-4 md:px-8 py-12">
+      <div className="border-t border-border bg-white px-4 md:px-8 py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2.5 mb-5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-accentGlow flex items-center justify-center shadow-glow-cyan-sm">
+              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-accent to-accentGlow flex items-center justify-center shadow-glow-cyan-sm">
                 <span className="text-white font-bold text-sm font-mono">V</span>
               </div>
               <span className="text-base font-display font-bold text-textLight tracking-widest">VEXA</span>
@@ -95,7 +95,7 @@ export default function Footer({ onOpenTrial }) {
                   key={s.label}
                   href="#"
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-lg glass-card border border-border/60 flex items-center justify-center text-textMuted hover:text-accent hover:border-accent/30 transition-all duration-300"
+                  className="w-9 h-9 rounded-lg bg-gray-50 border border-gray-200 flex items-center justify-center text-textMuted hover:text-accent hover:border-accent/30 hover:bg-accent/5 transition-all duration-300"
                 >
                   {s.svg}
                 </a>
@@ -129,7 +129,7 @@ export default function Footer({ onOpenTrial }) {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border/20 gap-4">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border gap-4">
           <p className="text-[10px] font-mono text-textDim tracking-wider">
             © {new Date().getFullYear()} Vexa Technologies. Todos os direitos reservados.
           </p>

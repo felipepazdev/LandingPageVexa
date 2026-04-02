@@ -21,18 +21,18 @@ export default function Hero({ onOpenTrial }) {
   return (
     <section
       ref={heroRef}
-      className="relative w-full min-h-screen flex flex-col items-center justify-center pt-28 pb-20 px-4 overflow-hidden bg-primary"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center pt-28 pb-20 px-4 overflow-hidden bg-white"
     >
       {/* ── Background layers ── */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Grid */}
-        <div className="absolute inset-0 bg-grid opacity-100" />
-        {/* Radial glow top-center */}
-        <div className="glow-orb absolute top-[-15%] left-[50%] -translate-x-1/2 w-[900px] h-[600px] bg-accent/[0.09]" />
-        <div className="glow-orb absolute top-[5%] left-[15%] w-[500px] h-[500px] bg-accent/[0.04]" />
-        <div className="glow-orb absolute top-[20%] right-[5%] w-[350px] h-[350px] bg-accentGlow/[0.04]" />
-        {/* Fade to black at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-primary to-transparent" />
+        {/* Subtle dot grid */}
+        <div className="absolute inset-0 bg-grid opacity-60" />
+        {/* Very soft cyan glow */}
+        <div className="glow-orb absolute top-[-20%] left-[50%] -translate-x-1/2 w-[1000px] h-[600px] bg-accent/[0.06]" />
+        <div className="glow-orb absolute top-[10%] left-[5%] w-[500px] h-[500px] bg-accent/[0.03]" />
+        <div className="glow-orb absolute top-[25%] right-[2%] w-[400px] h-[400px] bg-accentGlow/[0.03]" />
+        {/* Fade to secondary at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-secondary to-transparent" />
       </div>
 
       {/* ── Content ── */}
@@ -41,11 +41,11 @@ export default function Hero({ onOpenTrial }) {
         {/* Badge */}
         <div className="hero-badge inline-flex items-center gap-2 section-label mb-8">
           <Zap size={11} className="text-accent" />
-          <span>Plataforma de Gestão para Salões de Beleza &amp; Barbearias</span>
+          <span>Plataforma de Gestão para Salões &amp; Barbearias</span>
         </div>
 
         {/* H1 */}
-        <h1 className="hero-h1 font-display font-bold leading-[1.0] tracking-tight mb-7 w-full">
+        <h1 className="hero-h1 font-display font-bold leading-[1.05] tracking-tight mb-7 w-full">
           <span className="block text-5xl md:text-7xl lg:text-[6rem] text-textLight">
             Chega de Stress
           </span>
@@ -63,14 +63,14 @@ export default function Hero({ onOpenTrial }) {
         <div className="hero-cta flex flex-wrap items-center justify-center gap-4 mb-16">
           <button
             onClick={onOpenTrial}
-            className="btn-primary text-white px-9 py-4 rounded-xl font-semibold text-base flex items-center gap-2.5 group"
+            className="btn-primary px-9 py-4 rounded-xl font-semibold text-base flex items-center gap-2.5 group"
           >
             Começar Grátis — 7 dias
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
           </button>
-          <button className="btn-ghost text-textMuted hover:text-textLight px-7 py-4 rounded-xl font-sans text-sm flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center">
-              <Play size={10} fill="currentColor" className="text-accentLight ml-0.5" />
+          <button className="btn-ghost px-7 py-4 rounded-xl font-sans text-sm flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center">
+              <Play size={10} fill="currentColor" className="text-accent ml-0.5" />
             </div>
             Ver Demonstração
           </button>
@@ -83,8 +83,8 @@ export default function Hero({ onOpenTrial }) {
             { value: '1M+', label: 'Agendamentos' },
             { value: '5X', label: 'Mais Produtividade' },
             { value: '500+', label: 'Cidades' },
-          ].map((s, i) => (
-            <div key={s.label} className="glass-card px-8 py-5 rounded-2xl min-w-[160px] border border-white/5 hover:border-accent/20 transition-colors cursor-default">
+          ].map((s) => (
+            <div key={s.label} className="stat-card px-8 py-5 rounded-2xl min-w-[155px] cursor-default">
               <div className="text-3xl font-display font-bold text-textLight tracking-tight">{s.value}</div>
               <div className="text-[10px] text-textMuted mt-1.5 font-mono tracking-widest uppercase">{s.label}</div>
             </div>
@@ -93,29 +93,29 @@ export default function Hero({ onOpenTrial }) {
 
         {/* ── Hero Dashboard Mock ── */}
         <div className="hero-screen w-full max-w-5xl mx-auto relative">
-          {/* Glow aura behind the screen */}
-          <div className="absolute -inset-4 bg-accent/[0.04] rounded-3xl blur-2xl pointer-events-none" />
-          <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-4/5 h-16 bg-accent/10 blur-3xl rounded-full pointer-events-none" />
+          {/* Ambient glow */}
+          <div className="absolute -inset-6 bg-accent/[0.04] rounded-3xl blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-4/5 h-12 bg-accent/[0.08] blur-3xl rounded-full pointer-events-none" />
 
           <div className="screen-mock rounded-2xl overflow-hidden relative">
             {/* Browser bar */}
-            <div className="bg-[#060c18] px-5 py-3.5 flex items-center gap-3 border-b border-border/50">
+            <div className="bg-gray-50 px-5 py-3.5 flex items-center gap-3 border-b border-gray-100">
               <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-red-500/50" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-                <div className="w-3 h-3 rounded-full bg-green-500/50" />
+                <div className="w-3 h-3 rounded-full bg-red-400/70" />
+                <div className="w-3 h-3 rounded-full bg-yellow-400/70" />
+                <div className="w-3 h-3 rounded-full bg-green-400/70" />
               </div>
               <div className="flex-1">
-                <div className="bg-[#0a1525] rounded-lg px-5 py-1.5 text-[11px] font-mono text-textMuted/50 max-w-xs mx-auto text-center tracking-wider">
+                <div className="bg-white rounded-lg px-5 py-1.5 text-[11px] font-mono text-textMuted/60 max-w-xs mx-auto text-center tracking-wider border border-gray-100">
                   app.vexa.com.br/dashboard
                 </div>
               </div>
             </div>
 
             {/* Dashboard interior */}
-            <div className="flex bg-gradient-to-br from-[#060c18] to-[#040810]">
+            <div className="flex bg-gray-50/80">
               {/* Sidebar */}
-              <div className="hidden md:flex flex-col w-[200px] flex-shrink-0 border-r border-border/40 p-4 gap-1">
+              <div className="hidden md:flex flex-col w-[200px] flex-shrink-0 border-r border-gray-100 p-4 gap-1 bg-white">
                 {/* Logo in sidebar */}
                 <div className="flex items-center gap-2 mb-5 px-2">
                   <div className="w-6 h-6 rounded-md bg-gradient-to-br from-accent to-accentGlow flex items-center justify-center">
@@ -128,11 +128,11 @@ export default function Hero({ onOpenTrial }) {
                     key={item}
                     className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-sans cursor-pointer transition-all ${
                       i === 0
-                        ? 'bg-accent/15 text-accentLight border border-accent/20'
-                        : 'text-textDim hover:text-textMuted hover:bg-white/[0.03]'
+                        ? 'bg-accent/8 text-accent border border-accent/15 font-medium'
+                        : 'text-textMuted hover:text-textLight hover:bg-gray-50'
                     }`}
                   >
-                    <div className={`w-1.5 h-1.5 rounded-full ${i === 0 ? 'bg-accent' : 'bg-textDim/50'}`} />
+                    <div className={`w-1.5 h-1.5 rounded-full ${i === 0 ? 'bg-accent' : 'bg-gray-300'}`} />
                     {item}
                   </div>
                 ))}
@@ -143,21 +143,23 @@ export default function Hero({ onOpenTrial }) {
                 {/* Top row: metric cards */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
                   {[
-                    { icon: DollarSign, label: 'Receita', val: 'R$ 24.850', change: '+18%', color: '#34D399', glow: 'rgba(52,211,153,0.12)' },
-                    { icon: Users, label: 'Clientes', val: '184', change: '+12%', color: '#60A5FA', glow: 'rgba(96,165,250,0.12)' },
-                    { icon: TrendingUp, label: 'Ticket Médio', val: 'R$ 135', change: '+5%', color: '#A78BFA', glow: 'rgba(167,139,250,0.12)' },
-                    { icon: Zap, label: 'Taxa Retorno', val: '89%', change: '+3%', color: '#FCD34D', glow: 'rgba(252,211,77,0.12)' },
+                    { icon: DollarSign, label: 'Receita', val: 'R$ 24.850', change: '+18%', color: '#059669', bg: 'rgba(5,150,105,0.08)', border: 'rgba(5,150,105,0.15)' },
+                    { icon: Users, label: 'Clientes', val: '184', change: '+12%', color: '#0DA3AD', bg: 'rgba(13,163,173,0.08)', border: 'rgba(13,163,173,0.15)' },
+                    { icon: TrendingUp, label: 'Ticket Médio', val: 'R$ 135', change: '+5%', color: '#7C3AED', bg: 'rgba(124,58,237,0.08)', border: 'rgba(124,58,237,0.15)' },
+                    { icon: Zap, label: 'Taxa Retorno', val: '89%', change: '+3%', color: '#D97706', bg: 'rgba(217,119,6,0.08)', border: 'rgba(217,119,6,0.15)' },
                   ].map((c) => {
                     const Icon = c.icon;
                     return (
                       <div
                         key={c.label}
-                        className="glass-card rounded-xl p-3.5 relative overflow-hidden group cursor-pointer"
-                        style={{ boxShadow: `0 0 20px ${c.glow}` }}
+                        className="bg-white rounded-xl p-3.5 relative overflow-hidden cursor-pointer border"
+                        style={{ borderColor: c.border, boxShadow: `0 2px 8px ${c.bg}` }}
                       >
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-[10px] text-textDim font-mono uppercase tracking-wider">{c.label}</span>
-                          <Icon size={12} style={{ color: c.color }} />
+                          <div className="w-6 h-6 rounded-lg flex items-center justify-center" style={{ background: c.bg }}>
+                            <Icon size={11} style={{ color: c.color }} />
+                          </div>
                         </div>
                         <div className="text-base font-bold text-textLight">{c.val}</div>
                         <div className="text-[10px] mt-1 font-mono" style={{ color: c.color }}>{c.change} esse mês</div>
@@ -169,10 +171,10 @@ export default function Hero({ onOpenTrial }) {
                 {/* Charts row */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
                   {/* Bar chart */}
-                  <div className="md:col-span-2 glass-card rounded-xl p-4">
+                  <div className="md:col-span-2 bg-white rounded-xl p-4 border border-gray-100">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-[10px] text-textDim font-mono uppercase tracking-wider">Faturamento — 30 dias</span>
-                      <span className="text-[10px] text-accentLight font-mono">+18% ↑</span>
+                      <span className="text-[10px] text-textMuted font-mono uppercase tracking-wider">Faturamento — 30 dias</span>
+                      <span className="text-[10px] text-accent font-mono font-medium">+18% ↑</span>
                     </div>
                     <div className="flex items-end gap-1 h-[70px]">
                       {[28, 45, 38, 62, 52, 78, 65, 85, 72, 90, 80, 95, 88, 76, 92].map((h, i) => (
@@ -182,9 +184,9 @@ export default function Hero({ onOpenTrial }) {
                           style={{
                             height: `${h}%`,
                             background: i === 14
-                              ? 'linear-gradient(to top, #3B82F6, #60A5FA)'
-                              : `linear-gradient(to top, rgba(59,130,246,0.5), rgba(96,165,250,0.3))`,
-                            boxShadow: i === 14 ? '0 0 8px rgba(59,130,246,0.5)' : 'none',
+                              ? 'linear-gradient(to top, #0DA3AD, #1ACBD6)'
+                              : 'linear-gradient(to top, rgba(13,163,173,0.25), rgba(26,203,214,0.12))',
+                            boxShadow: i === 14 ? '0 0 8px rgba(13,163,173,0.35)' : 'none',
                           }}
                         />
                       ))}
@@ -192,22 +194,22 @@ export default function Hero({ onOpenTrial }) {
                   </div>
 
                   {/* Top services */}
-                  <div className="glass-card rounded-xl p-4">
-                    <div className="text-[10px] text-textDim font-mono uppercase tracking-wider mb-3">Top Serviços</div>
+                  <div className="bg-white rounded-xl p-4 border border-gray-100">
+                    <div className="text-[10px] text-textMuted font-mono uppercase tracking-wider mb-3">Top Serviços</div>
                     {[
-                      { name: 'Corte', pct: 90, color: '#60A5FA' },
-                      { name: 'Barba', pct: 72, color: '#A78BFA' },
-                      { name: 'Combo', pct: 55, color: '#34D399' },
+                      { name: 'Corte', pct: 90, color: '#0DA3AD' },
+                      { name: 'Barba', pct: 72, color: '#7C3AED' },
+                      { name: 'Combo', pct: 55, color: '#059669' },
                     ].map((s) => (
                       <div key={s.name} className="mb-2.5">
                         <div className="flex justify-between text-[10px] mb-1">
-                          <span className="text-textMuted">{s.name}</span>
-                          <span className="text-textDim">{s.pct}%</span>
+                          <span className="text-textDim">{s.name}</span>
+                          <span className="text-textMuted font-medium">{s.pct}%</span>
                         </div>
-                        <div className="bg-border rounded-full h-1">
+                        <div className="bg-gray-100 rounded-full h-1.5">
                           <div
-                            className="rounded-full h-1"
-                            style={{ width: `${s.pct}%`, background: s.color, boxShadow: `0 0 6px ${s.color}60` }}
+                            className="rounded-full h-1.5"
+                            style={{ width: `${s.pct}%`, background: s.color }}
                           />
                         </div>
                       </div>
@@ -216,21 +218,21 @@ export default function Hero({ onOpenTrial }) {
                 </div>
 
                 {/* Mini calendar strip */}
-                <div className="glass-card rounded-xl p-3 flex items-center gap-3">
-                  <span className="text-[10px] text-textDim font-mono uppercase tracking-wider flex-shrink-0">Próximos</span>
+                <div className="bg-white rounded-xl p-3 flex items-center gap-3 border border-gray-100">
+                  <span className="text-[10px] text-textMuted font-mono uppercase tracking-wider flex-shrink-0">Próximos</span>
                   <div className="flex gap-2 overflow-hidden">
                     {[
-                      { time: '09:00', name: 'João Lima', service: 'Corte', color: '#60A5FA' },
-                      { time: '10:30', name: 'Pedro S.', service: 'Barba', color: '#A78BFA' },
-                      { time: '11:00', name: 'Carlos R.', service: 'Combo', color: '#34D399' },
+                      { time: '09:00', name: 'João Lima', service: 'Corte', color: '#0DA3AD' },
+                      { time: '10:30', name: 'Pedro S.', service: 'Barba', color: '#7C3AED' },
+                      { time: '11:00', name: 'Carlos R.', service: 'Combo', color: '#059669' },
                     ].map((a) => (
                       <div
                         key={a.time}
-                        className="flex items-center gap-2 bg-white/[0.03] border border-white/[0.05] rounded-lg px-3 py-1.5 flex-shrink-0"
+                        className="flex items-center gap-2 bg-gray-50 border border-gray-100 rounded-lg px-3 py-1.5 flex-shrink-0"
                       >
-                        <div className="w-1.5 h-1.5 rounded-full" style={{ background: a.color, boxShadow: `0 0 4px ${a.color}` }} />
+                        <div className="w-1.5 h-1.5 rounded-full" style={{ background: a.color }} />
                         <span className="text-[10px] text-textMuted font-mono">{a.time}</span>
-                        <span className="text-[10px] text-textLight">{a.name}</span>
+                        <span className="text-[10px] text-textLight font-medium">{a.name}</span>
                         <span className="text-[10px] text-textDim hidden md:inline">{a.service}</span>
                       </div>
                     ))}

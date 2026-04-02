@@ -14,13 +14,13 @@ export default function CursorScheduler({ isLight }) {
         .to(cursorRef.current, { x: 120, y: 60, duration: 0.8, ease: 'power2.inOut' })
         .to(cursorRef.current, { scale: 0.8, duration: 0.1 })
         .call(() => {
-          gsap.to(gridCellsRef.current[2], { backgroundColor: '#C9A84C', color: '#FFFFFF', duration: 0.3 });
+          gsap.to(gridCellsRef.current[2], { backgroundColor: '#0DA3AD', color: '#FFFFFF', duration: 0.3 });
         })
         .to(cursorRef.current, { scale: 1, duration: 0.1 })
         .to(cursorRef.current, { x: 200, y: 100, duration: 0.8, ease: 'power2.inOut', delay: 0.2 })
         .to(cursorRef.current, { scale: 0.8, duration: 0.1 })
         .call(() => {
-          gsap.to(gridCellsRef.current[11], { backgroundColor: '#C9A84C', color: '#FFFFFF', duration: 0.3 });
+          gsap.to(gridCellsRef.current[11], { backgroundColor: '#0DA3AD', color: '#FFFFFF', duration: 0.3 });
         })
         .to(cursorRef.current, { scale: 1, duration: 0.1 })
         .to(cursorRef.current, { x: 250, y: 180, opacity: 0, duration: 1, ease: 'power2.in' })

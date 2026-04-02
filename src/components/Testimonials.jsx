@@ -10,7 +10,7 @@ const testimonials = [
     role: 'Dono · Barber King Studio',
     city: 'São Paulo, SP',
     avatar: 'SM',
-    color: '#3B82F6',
+    color: '#0DA3AD',
     quote: 'Em 2 semanas usando a Vexa, o movimento no meu salão ficou muito mais organizado. Os lembretes automáticos de WhatsApp reduziram as faltas drasticamente.',
     stars: 5,
   },
@@ -19,7 +19,7 @@ const testimonials = [
     role: 'Gerente · Studio L Beauty',
     city: 'Rio de Janeiro, RJ',
     avatar: 'LF',
-    color: '#A78BFA',
+    color: '#7C3AED',
     quote: 'O dashboard financeiro mudou completamente como eu tomo decisões. Finalmente consigo ver onde está o lucro e onde estão as perdas em tempo real.',
     stars: 5,
   },
@@ -28,7 +28,7 @@ const testimonials = [
     role: 'Proprietário · RC Barbearia Elite',
     city: 'Belo Horizonte, MG',
     avatar: 'RC',
-    color: '#34D399',
+    color: '#059669',
     quote: 'Minha equipe adorou. O comissionamento automático acabou com conflitos internos e todos têm transparência total nos relatórios de comissão.',
     stars: 5,
   },
@@ -37,7 +37,7 @@ const testimonials = [
     role: 'Sócia · Looks Premium',
     city: 'Curitiba, PR',
     avatar: 'BT',
-    color: '#FB923C',
+    color: '#EA580C',
     quote: 'A visão de Timeline Semanal é sensacional. O sistema de Buffer Time entre atendimentos salvou nossa equipe do esgotamento. Agora temos um fluxo perfeito.',
     stars: 5,
   },
@@ -46,7 +46,7 @@ const testimonials = [
     role: 'Dono · MA Studio Premium',
     city: 'Brasília, DF',
     avatar: 'MA',
-    color: '#FCD34D',
+    color: '#D97706',
     quote: 'Antes eu perdia entre 3-4 horas por semana em planilhas. Agora o relatório de comissões sai em 1 clique. A Vexa pagou o investimento em 15 dias.',
     stars: 5,
   },
@@ -55,7 +55,7 @@ const testimonials = [
     role: 'Gerente · Chic Estética',
     city: 'Porto Alegre, RS',
     avatar: 'CV',
-    color: '#F87171',
+    color: '#DB2777',
     quote: 'A função de CRM transformou meu relacionamento com os clientes. Sei exatamente quando cada um foi pela última vez e mando promoções personalizadas.',
     stars: 5,
   },
@@ -85,8 +85,8 @@ export default function Testimonials() {
       className="relative w-full py-32 px-0 bg-secondary overflow-hidden"
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-grid opacity-60 pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-accent/[0.04] blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute inset-0 bg-grid opacity-50 pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[250px] bg-accent/[0.04] blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
         {/* Header */}
@@ -137,11 +137,11 @@ export default function Testimonials() {
 
 function TestimonialCard({ t }) {
   return (
-    <div className="testimonial-card rounded-2xl p-6 w-[360px] flex-shrink-0 border border-border/70 cursor-default">
+    <div className="testimonial-card rounded-2xl p-6 w-[360px] flex-shrink-0 cursor-default">
       {/* Stars */}
       <div className="flex items-center gap-1 mb-4">
         {[...Array(t.stars)].map((_, i) => (
-          <span key={i} className="text-yellow-400 text-sm">★</span>
+          <span key={i} className="text-amber-400 text-sm">★</span>
         ))}
       </div>
 
@@ -151,8 +151,8 @@ function TestimonialCard({ t }) {
       {/* Author */}
       <div className="flex items-center gap-3">
         <div
-          className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-          style={{ background: `linear-gradient(135deg, ${t.color}, ${t.color}80)` }}
+          className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0 shadow-md"
+          style={{ background: `linear-gradient(135deg, ${t.color}, ${t.color}90)` }}
         >
           {t.avatar}
         </div>

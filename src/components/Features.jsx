@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Calendar, DollarSign, BarChart3, Users, Shield, Zap, ArrowRight, MessageCircle, CheckCircle2 } from 'lucide-react';
+import { Calendar, DollarSign, BarChart3, Users, Shield, Zap, ArrowRight, MessageCircle, CheckCircle2, Check } from 'lucide-react';
 import WhatsAppDemo from './features/WhatsAppDemo';
 
 gsap.registerPlugin(ScrollTrigger);

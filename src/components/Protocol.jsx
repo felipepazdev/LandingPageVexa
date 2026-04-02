@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Lock, RefreshCw, Database, Globe, ShieldCheck, Zap, Wifi } from 'lucide-react';
+import { Lock, RefreshCw, Database, Globe, ShieldCheck, Zap, Wifi, CheckCircle2 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,37 +10,38 @@ const layers = [
     icon: RefreshCw,
     label: 'Automação',
     title: 'Trabalha Enquanto Você Dorme',
-    desc: 'Agenda, mensagens e lembretes automáticos cuidados pelo sistema, sem esforço manual da sua parte.',
+    desc: 'Seus lembretes e agendamentos funcionam sozinhos, sem que você precise mexer em nada.',
     accent: '#0DA3AD',
   },
   {
     icon: Zap,
     label: 'Velocidade',
     title: 'Rapidez Surpreendente',
-    desc: 'Funciona em qualquer dispositivo sem travamentos. Do celular ao computador, sempre instantâneo.',
+    desc: 'O sistema é leve e abre instantaneamente no seu celular ou computador, sem travamentos.',
     accent: '#7C3AED',
   },
   {
     icon: ShieldCheck,
-    label: 'Segurança',
+    label: 'Segurança Máxima',
     title: 'Seus Dados Super Protegidos',
-    desc: 'Criptografia militar para seus clientes, agenda e financeiro. Backup automático diário.',
+    desc: 'Guardamos suas informações com o mesmo nível de segurança dos grandes bancos mundiais.',
     accent: '#059669',
+    highlight: true,
   },
   {
     icon: Wifi,
-    label: 'Integração',
-    title: 'Conectado ao WhatsApp Oficial',
-    desc: 'Mensagens entregues via API oficial. Sem bloqueios, sem falhas, com rastreamento de entrega.',
+    label: 'Conexão',
+    title: 'WhatsApp Sempre Ativo',
+    desc: 'Mensagens enviadas via conexão oficial, garantindo que cheguem na hora certa para o cliente.',
     accent: '#D97706',
   },
 ];
 
 const trustBadges = [
-  { label: 'SSL 256-bit', icon: Lock, color: '#0DA3AD' },
-  { label: 'LGPD Compliance', icon: ShieldCheck, color: '#059669' },
-  { label: '99.9% Uptime', icon: Wifi, color: '#7C3AED' },
-  { label: 'Backup Diário', icon: Database, color: '#D97706' },
+  { label: 'Site 100% Seguro', icon: Lock, color: '#0DA3AD' },
+  { label: 'Privacidade Total', icon: ShieldCheck, color: '#059669' },
+  { label: 'Sistema ultra veloz', icon: Zap, color: '#7C3AED' },
+  { label: 'Backup Automático', icon: Database, color: '#D97706' },
 ];
 
 export default function Protocol() {
@@ -80,7 +81,7 @@ export default function Protocol() {
         {/* ── Header ── */}
         <div className="proto-header text-center mb-16">
           <div className="inline-flex items-center section-label mb-7">
-            Como a Vexa Cuida de Você
+            Sua tranquilidade é nossa prioridade
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-textLight mb-5 leading-tight tracking-tight">
             Tudo Sempre <span className="text-gradient">Sob Controle</span>
@@ -90,7 +91,7 @@ export default function Protocol() {
           </p>
         </div>
 
-        {/* ── Trust badges ── */}
+        {/* ── Humanized Trust badges ── */}
         <div className="flex flex-wrap justify-center gap-3 mb-20">
           {trustBadges.map((b) => {
             const Icon = b.icon;
@@ -121,40 +122,48 @@ export default function Protocol() {
               return (
                 <div
                   key={l.label}
-                  className="protocol-item glass-card rounded-2xl p-6 transition-all duration-300 relative overflow-hidden group cursor-default"
+                  className={`protocol-item glass-card rounded-2xl p-6 transition-all duration-300 relative overflow-hidden group cursor-default ${l.highlight ? 'bg-white shadow-card-hover border-accent/20 ring-1 ring-accent/5 scale-[1.02]' : ''}`}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.borderColor = `${l.accent}30`;
                     e.currentTarget.style.boxShadow = `0 8px 32px rgba(0,0,0,0.08), 0 0 32px ${l.accent}12`;
-                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.transform = 'translateY(-2px) scale(1.02)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '';
-                    e.currentTarget.style.boxShadow = '';
-                    e.currentTarget.style.transform = '';
+                    e.currentTarget.style.borderColor = l.highlight ? 'rgba(13, 163, 173, 0.2)' : '';
+                    e.currentTarget.style.boxShadow = l.highlight ? '' : '';
+                    e.currentTarget.style.transform = l.highlight ? 'scale(1.02)' : '';
                   }}
                 >
                   {/* Left accent bar */}
                   <div
-                    className="absolute left-0 top-0 bottom-0 w-[3px] rounded-l-2xl"
-                    style={{ background: `linear-gradient(to bottom, ${l.accent}, ${l.accent}30)` }}
+                    className="absolute left-0 top-0 bottom-0 w-[4px] rounded-l-2xl"
+                    style={{ background: `linear-gradient(to bottom, ${l.accent}, ${l.accent}60)` }}
                   />
 
                   <div className="pl-4 flex items-start gap-4">
                     <div
-                      className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5"
-                      style={{ background: `${l.accent}10`, border: `1px solid ${l.accent}20` }}
+                      className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm"
+                      style={{ background: `${l.accent}15`, border: `1px solid ${l.accent}30` }}
                     >
                       <Icon size={18} style={{ color: l.accent }} />
                     </div>
                     <div className="flex-1">
-                      <span
-                        className="text-[9px] font-mono tracking-[0.3em] uppercase font-bold block mb-1.5"
-                        style={{ color: `${l.accent}90` }}
-                      >
-                        {l.label}
-                      </span>
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <span
+                          className="text-[9px] font-mono tracking-[0.3em] uppercase font-bold block"
+                          style={{ color: `${l.accent}` }}
+                        >
+                          {l.label}
+                        </span>
+                        {l.highlight && (
+                          <div className="flex items-center gap-1 bg-accent/10 border border-accent/20 px-2 py-0.5 rounded-full">
+                            <CheckCircle2 size={8} className="text-accent" />
+                            <span className="text-[7px] text-accent font-bold uppercase tracking-tighter">Prioridade</span>
+                          </div>
+                        )}
+                      </div>
                       <h4 className="text-sm font-bold text-textLight mb-1.5 leading-snug">{l.title}</h4>
-                      <p className="text-xs text-textMuted leading-relaxed">{l.desc}</p>
+                      <p className="text-xs text-textMuted leading-relaxed font-normal">{l.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -178,17 +187,17 @@ export default function Protocol() {
                   {/* Outer ring */}
                   <div
                     className="spin-slow absolute rounded-full border border-dashed"
-                    style={{ width: 176, height: 176, borderColor: 'rgba(13,163,173,0.18)' }}
+                    style={{ width: 176, height: 176, borderColor: 'rgba(13,163,173,0.2)' }}
                   />
                   {/* Middle ring */}
                   <div
                     className="spin-slow-reverse absolute rounded-full border"
-                    style={{ width: 132, height: 132, borderColor: 'rgba(13,163,173,0.24)' }}
+                    style={{ width: 132, height: 132, borderColor: 'rgba(13,163,173,0.3)' }}
                   />
                   {/* Inner halo */}
                   <div
-                    className="absolute rounded-full border bg-accent/[0.04]"
-                    style={{ width: 90, height: 90, borderColor: 'rgba(13,163,173,0.35)' }}
+                    className="absolute rounded-full border bg-accent/[0.05]"
+                    style={{ width: 90, height: 90, borderColor: 'rgba(13,163,173,0.4)' }}
                   />
                   {/* Center circle */}
                   <div className="relative w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accentGlow flex items-center justify-center shadow-glow-cyan z-10">
@@ -207,34 +216,34 @@ export default function Protocol() {
                       style={{
                         transform: `translate(-50%, -50%) rotate(${d.angle}deg) translateX(70px)`,
                         background: d.color,
-                        boxShadow: `0 0 8px ${d.color}80`,
+                        boxShadow: `0 0 10px ${d.color}90`,
                       }}
                     />
                   ))}
                 </div>
 
-                {/* Stats */}
+                {/* Humanized Stats */}
                 <div className="grid grid-cols-2 gap-3 w-full">
                   {[
-                    { label: 'Criptografia', value: 'AES-256', color: '#0DA3AD' },
-                    { label: 'Disponibilidade', value: '99.9%', color: '#059669' },
-                    { label: 'Backup', value: 'Diário', color: '#7C3AED' },
-                    { label: 'Suporte', value: '24/7', color: '#D97706' },
+                    { label: 'Proteção', value: 'Total', color: '#0DA3AD' },
+                    { label: 'Sistema', value: 'Sempre Ativo', color: '#059669' },
+                    { label: 'Suas Cópias', value: 'Garantidas', color: '#7C3AED' },
+                    { label: 'Nosso Time', value: 'Ao seu lado', color: '#D97706' },
                   ].map((s) => (
                     <div
                       key={s.label}
                       className="bg-gray-50 rounded-xl p-3 border border-gray-100 text-left"
                     >
                       <div className="text-[9px] font-mono text-textDim uppercase tracking-widest mb-1">{s.label}</div>
-                      <div className="text-sm font-bold" style={{ color: s.color }}>{s.value}</div>
+                      <div className="text-sm font-bold leading-tight" style={{ color: s.color }}>{s.value}</div>
                     </div>
                   ))}
                 </div>
 
                 {/* Bottom tag */}
-                <div className="mt-5 flex items-center gap-2 text-[10px] font-mono text-textDim">
-                  <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  Todos os sistemas operacionais
+                <div className="mt-6 flex items-center gap-2 text-[10px] font-mono text-textDim justify-center">
+                  <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.4)] animate-pulse" />
+                  Sistemas funcionando agora
                 </div>
               </div>
             </div>

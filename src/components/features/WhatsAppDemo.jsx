@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { Check, Send, User, MessageCircle, CheckCircle } from 'lucide-react';
+import { Check, Send, User, MessageCircle, CheckCircle, Bell } from 'lucide-react';
 
 export default function WhatsAppDemo() {
   const [step, setStep] = useState(0);
   
   const messages = [
-    { type: 'system', text: 'Novo agendamento: Corte + Barba - 14:00', delay: 1000 },
-    { type: 'sent', text: 'Olá! 👋 Notamos que você tem um horário amanhã às 14:00. Podemos confirmar?', delay: 2000 },
-    { type: 'received', text: 'Oi! Pode confirmar sim, estarei aí!', delay: 3500 },
-    { type: 'sent', text: 'Perfeito! ✅ Seu agendamento foi confirmado. Até amanhã!', delay: 2000 },
+    { type: 'system', text: 'Agendamento: Corte + Barba (Amanhã 14h)', delay: 1000 },
+    { type: 'sent', text: '🔔 Lembrete Vexa: Falta 24h para seu horário às 14:00. Nos vemos amanhã! 👋', delay: 2500 },
+    { type: 'system', text: 'Mensagem enviada com sucesso', delay: 1500 },
+    { type: 'sent', text: '⚡ Ei! Falta apenas 2h para seu agendamento das 14:00. Já estamos te esperando! ✂️', delay: 3500 },
   ];
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function WhatsAppDemo() {
 
       timeout = setTimeout(() => {
         if (isMounted) runDemo();
-      }, currentDelay + 4000);
+      }, currentDelay + 5000);
     };
 
     runDemo();
@@ -52,7 +52,7 @@ export default function WhatsAppDemo() {
       {/* Background Glow */}
       <div className="absolute inset-0 bg-accent/5 blur-[80px] rounded-full pointer-events-none" />
 
-      {/* Modern Phone UI (Just the screen art) */}
+      {/* Modern Phone UI */}
       <div className="relative z-10 bg-white rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1),0_0_0_1px_rgba(0,0,0,0.05)] overflow-hidden border border-gray-100 aspect-[9/17] flex flex-col">
         
         {/* iOS Style Status Bar */}
@@ -71,10 +71,10 @@ export default function WhatsAppDemo() {
             <User size={20} />
           </div>
           <div className="flex-1">
-            <h4 className="text-sm font-bold text-gray-900">Vexa - Atendimento</h4>
+            <h4 className="text-sm font-bold text-gray-900">Vexa - Notificações</h4>
             <div className="flex items-center gap-1">
                <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
-               <span className="text-[10px] text-gray-400 font-medium tracking-wide">Online</span>
+               <span className="text-[10px] text-gray-400 font-medium tracking-wide">Automação Ativa</span>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function WhatsAppDemo() {
               className={`msg-bubble-${i} flex ${m.type === 'received' ? 'justify-start' : 'justify-end'} ${step > i ? 'opacity-100' : 'opacity-0'}`}
             >
               <div className={`relative px-4 py-3 rounded-2xl text-[13px] leading-relaxed shadow-sm ${
-                m.type === 'system' ? 'bg-gray-200/50 text-gray-500 text-[11px] text-center mx-auto px-6 py-1 rounded-full italic shadow-none' : 
+                m.type === 'system' ? 'bg-gray-200/50 text-gray-400 text-[10px] text-center mx-auto px-5 py-1 rounded-full font-medium shadow-none' : 
                 m.type === 'sent' ? 'bg-accent text-white rounded-tr-none' : 
                 'bg-white text-gray-700 rounded-tl-none border border-gray-100'
               }`}>
@@ -103,13 +103,13 @@ export default function WhatsAppDemo() {
           ))}
         </div>
 
-        {/* Bottom Input Art */}
-        <div className="p-4 bg-white border-t border-gray-50 flex items-center gap-3">
+        {/* Bottom Bar Art */}
+        <div className="p-4 bg-white border-t border-gray-50 flex items-center gap-3 opacity-30 grayscale">
           <div className="flex-1 bg-gray-100 h-10 rounded-2xl px-4 text-[11px] text-gray-400 flex items-center font-medium">
-            Sua resposta aqui...
+            (Sistema de notificações único)
           </div>
-          <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white shadow-lg shadow-accent/20">
-            <Send size={16} />
+          <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-white">
+            <Bell size={16} />
           </div>
         </div>
 
@@ -119,24 +119,24 @@ export default function WhatsAppDemo() {
         </div>
       </div>
 
-      {/* Labels Flutuantes Modernos */}
+      {/* Modern Status Badges */}
       <div className="absolute -right-8 top-12 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-2xl border border-gray-100 flex items-center gap-3 z-20">
-         <div className="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center">
-            <CheckCircle size={20} className="text-green-600" />
+         <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center">
+            <Bell size={20} className="text-orange-600" />
          </div>
          <div>
-            <p className="text-[11px] font-bold text-gray-800">Agendamento</p>
-            <p className="text-[10px] text-green-600 font-bold uppercase tracking-widest">Confirmado</p>
+            <p className="text-[11px] font-bold text-gray-800">Lembrete Vexa</p>
+            <p className="text-[10px] text-orange-600 font-bold uppercase tracking-widest">Enviando...</p>
          </div>
       </div>
 
       <div className="absolute -left-8 bottom-20 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-2xl border border-gray-100 flex items-center gap-3 z-20">
-         <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
-            <MessageCircle size={20} className="text-accent" />
+         <div className="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center">
+            <CheckCircle size={20} className="text-green-600" />
          </div>
          <div>
-            <p className="text-[11px] font-bold text-gray-800">WhatsApp</p>
-            <p className="text-[10px] text-accent font-bold uppercase tracking-widest">Enviado</p>
+            <p className="text-[11px] font-bold text-gray-800">Status</p>
+            <p className="text-[10px] text-green-600 font-bold uppercase tracking-widest">100% Entregue</p>
          </div>
       </div>
     </div>
